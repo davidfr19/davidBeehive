@@ -1,0 +1,16 @@
+<div>
+  <h3>{{post.getTitle()}}</h3>
+  <p>{{post.getBody()}}</p>
+
+<h4>Comments</h4>
+<div *ngFor = "let comment of post.getComments()">
+  <app-comment [comment]='comment'></app-comment>
+</div>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+ Add Comment
+</button>
+
+<app-new-comment [iAmBee]='iAmBee'></app-new-comment>
+
+</div>

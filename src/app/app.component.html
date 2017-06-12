@@ -1,0 +1,22 @@
+<app-header></app-header>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3 col-md-3">
+            <app-bees (getBee)='currentBee($event)' [bees]='bees'></app-bees>
+        </div>
+
+        <div class="col-sm-3 col-md-3">
+            <app-posts [myCurrentBee]='myCurrentBee' [iAmBee]='iAmBee'></app-posts>
+        </div>
+
+        <div class="col-sm-3 col-md-3">
+            <app-album [myCurrentBee]='myCurrentBee'></app-album>
+        </div>
+        
+        <div class="col-sm-3 col-md-3">
+            <app-todos [myCurrentBee]='myCurrentBee'></app-todos>
+        </div>
+
+            
+    </div>
+</div>

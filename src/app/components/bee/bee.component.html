@@ -1,0 +1,15 @@
+<div class="jumbotron">
+    <p>{{bee.getName()}}</p>
+    <p>{{bee.getUserName()}}</p>
+    <p>{{bee.getEmail()}}</p>
+    <p>{{bee.getPhone()}}</p>
+    <p>{{bee.getAddress().getStreet()}},{{bee.getAddress().getCity()}},{{bee.getAddress().getZipcode()}}</p>
+    <p>Posts: {{bee.getPosts().length}}</p>
+    <p>Todos: {{bee.getTodos().length}}</p>
+    <p>Photos: {{bee.getAlbum().getPhotos().length}}</p>
+    <div class="btn-group" role="group">
+        <button class="btn btn-default" (click)="showPost(bee)">Posts</button>
+        <button class="btn btn-default" (click)="showAlbum(bee)">Album</button>
+        <button class="btn btn-default" (click)="showTodo(bee)">Todos</button>
+    </div>
+</div>
