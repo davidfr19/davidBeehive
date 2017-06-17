@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import {Post} from './../../models/post';
 
 @Component({
   selector: 'app-bee-activity',
@@ -10,6 +11,18 @@ export class BeeActivityComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  littlePost:Post;
+
+  @Input() myCurrentBee;
+  @Input() iAmBee;
+
+  
+  myPost(e){
+
+    this.littlePost = e;
+
   }
 
 }

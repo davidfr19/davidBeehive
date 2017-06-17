@@ -6,7 +6,7 @@ import { AlertModule } from 'ng2-bootstrap/ng2-bootstrap';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
-import { BeeActivityComponent } from './components//bee-activity/bee-activity.component';
+import { BeeActivityComponent } from './components/bee-activity/bee-activity.component';
 import { TodosComponent } from './components/todos/todos.component';
 import { AlbumComponent } from './components/album/album.component';
 import { PhotoComponent } from './components/photo/photo.component';

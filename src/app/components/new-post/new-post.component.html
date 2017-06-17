@@ -11,16 +11,16 @@
         <form>
           <div class="form-group">
             <label for="exampleInputTittle">Tittle</label>
-            <input type="text" class="form-control" id="exampleInputTittle" placeholder="Title">
+            <input type="text" (change)='onTitleChange($event)'  class="form-control" id="exampleInputTittle" placeholder="Title">
           </div>
           <div class="form-group">
             <label for="exampleInputBody">Body</label>
-            <input type="text" class="form-control" id="exampleInputBody" placeholder="Body">
+            <input type="text" (change)='onBodyChange($event)'  class="form-control" id="exampleInputBody" placeholder="Body">
           </div>
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Submit</button>
+        <button type="button" (click)="onDone()" class="btn btn-secondary" data-dismiss="modal">Submit</button>
       </div>
     </div>
   </div>

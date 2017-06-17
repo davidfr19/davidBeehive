@@ -11,12 +11,12 @@
         <form>
           <div class="form-group">
             <label for="exampleInputTittle">Tittle</label>
-            <input type="text" class="form-control" id="exampleInputTittle" placeholder="Title">
+            <input type="text" class="form-control" (change)='onTitleChange($event)' id="exampleInputTittle" placeholder="Title">
           </div>
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Submit</button>
+        <button type="button" (click)="onDone()" class="btn btn-secondary" data-dismiss="modal">Submit</button>
       </div>
     </div>
   </div>

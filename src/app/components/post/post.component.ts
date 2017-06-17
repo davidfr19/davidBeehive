@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import {Comment} from './../../models/comment';
 
 @Component({
   selector: 'app-post',
@@ -6,13 +7,22 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./post.component.scss']
 })
 export class PostComponent implements OnInit {
-
+  
+  //comments:Comment[] = [];
+ 
   constructor() { }
 
   @Input() post;
   @Input() iAmBee;
 
+  @Output() emmitPost = new EventEmitter;
+
   ngOnInit() {
   }
+
+  sendPost(post){
+    this.emmitPost.emit(post);
+  }
+
 
 }

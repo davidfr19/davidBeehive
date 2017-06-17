@@ -17,19 +17,9 @@ export class BeeComponent implements OnInit {
   ngOnInit() {
   }
 
-  showPost(bee){
+  showBeeInfo(bee){
     this.sendBee.emit(bee);
-
   }
 
-  showAlbum(bee){
-    this.sendBee.emit(bee);
-
-  }
-
-  showTodo(bee){
-    this.sendBee.emit(bee);
-
-  }
 
 }

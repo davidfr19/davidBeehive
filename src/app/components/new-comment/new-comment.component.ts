@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 import {Comment} from './../../models/comment';
 
 @Component({
@@ -11,28 +11,27 @@ export class NewCommentComponent implements OnInit {
   constructor() { }
 
   @Input() iAmBee;
+  @Input() littlePost;
 
-  newComment:Comment;
+  body:string = '';
+  title:string = '';
 
   ngOnInit() {
   }
 
-  @Output() sendComment;
-
   onTitleChange(event){
-    this.newComment.setName(event.target.value);
+    this.title = event.target.value;
   }
 
   onBodyChange(event){
-    this.newComment.setBody(event.target.value);
+    this.body = event.target.value;
   }
 
   onDone() {
-
-    this.newComment.setId(4);
-	  this.newComment.setPostId(4);
-    this.newComment.setEmail(this.iAmBee.getEmail());
-    this.sendComment.emit(this.newComment);
+    var newComment = new Comment(12, this.littlePost.getId(), this.title, this.body, this.iAmBee.getEmail());
+    this.littlePost.addComment(newComment);
+    this.title = '';
+    this.body = '';
   }
 
   

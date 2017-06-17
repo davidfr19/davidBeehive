@@ -1,10 +1,11 @@
 <div>
   <h2>Bee's Posts</h2>
+
   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newPost">
- Add Post
-</button>
-<app-new-post></app-new-post>
-  <div *ngFor="let post of myCurrentBee.getPosts()">
-    <app-post [post]="post" [iAmBee]='iAmBee'></app-post>
+  Add Post
+  </button>
+  
+  <div *ngFor="let post of myCurrentBee.getPosts().slice().reverse()">
+    <app-post (emmitPost)='currentPost($event)' [post]="post" [iAmBee]='iAmBee'></app-post>
   </div>
 </div>

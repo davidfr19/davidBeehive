@@ -1,4 +1,8 @@
-<div class="jumbotron">
+<div class="jumbotron" >
+    <div class="text-center" (click)="showBeeInfo(bee)">
+        
+    <img class="img-circle" src="{{bee.getAvatarUrl()}}">
+     
     <p>{{bee.getName()}}</p>
     <p>{{bee.getUserName()}}</p>
     <p>{{bee.getEmail()}}</p>
@@ -8,8 +12,10 @@
     <p>Todos: {{bee.getTodos().length}}</p>
     <p>Photos: {{bee.getAlbum().getPhotos().length}}</p>
     <div class="btn-group" role="group">
-        <button class="btn btn-default" (click)="showPost(bee)">Posts</button>
+        <button class="btn btn-default" (click)="showInfo(bee)">Posts</button>
         <button class="btn btn-default" (click)="showAlbum(bee)">Album</button>
         <button class="btn btn-default" (click)="showTodo(bee)">Todos</button>
+    </div>
+
     </div>
 </div>

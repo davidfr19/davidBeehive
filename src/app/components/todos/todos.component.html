@@ -2,10 +2,10 @@
 <div>
   <h2>To Do List</h2>
    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newTodo">
- Add Post
-</button>
-<app-new-todo></app-new-todo>
-  <div *ngFor="let todo of myCurrentBee.getTodos()">
+    Add To Do
+  </button>
+
+  <div *ngFor="let todo of myCurrentBee.getTodos().slice().reverse()">
     <app-todo [todo]='todo'></app-todo>
   </div>
 </div>
