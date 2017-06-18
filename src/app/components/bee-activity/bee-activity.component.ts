@@ -17,6 +17,7 @@ export class BeeActivityComponent implements OnInit {
 
   @Input() myCurrentBee;
   @Input() iAmBee;
+  @Input() showArray;
 
   
   myPost(e){

@@ -11,6 +11,7 @@ export class BeeComponent implements OnInit {
   constructor() { }
 
   @Input() bee;
+  @Input() showArray;
 
   @Output() sendBee = new EventEmitter();
 
@@ -19,6 +20,27 @@ export class BeeComponent implements OnInit {
 
   showBeeInfo(bee){
     this.sendBee.emit(bee);
+    this.showArray[0]= true;
+    this.showArray[1]= true;
+    this.showArray[2]= true;
+  }
+
+  showPosts(){
+    this.showArray[0]= true;
+    this.showArray[1]= false;
+    this.showArray[2]= false;
+  }
+
+  showAlbum(){
+    this.showArray[0]= false;
+    this.showArray[1]= true;
+    this.showArray[2]= false;
+  }
+
+  showTodo(){
+    this.showArray[0]= false;
+    this.showArray[1]= false;
+    this.showArray[2]= true;
   }
 
 

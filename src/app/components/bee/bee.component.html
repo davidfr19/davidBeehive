@@ -1,9 +1,12 @@
-<div class="jumbotron" >
-    <div class="text-center" (click)="showBeeInfo(bee)">
+<div class="jumbotron text-center" >
+    <div class="" (click)="showBeeInfo(bee)" >
         
     <img class="img-circle" src="{{bee.getAvatarUrl()}}">
-     
-    <p>{{bee.getName()}}</p>
+    <div class="row info-btn">
+        <button class="btn btn-default" (click)="showBeeInfo(bee)">Mostrar Info</button>
+    </div>
+    
+    <p class="">{{bee.getName()}}</p>
     <p>{{bee.getUserName()}}</p>
     <p>{{bee.getEmail()}}</p>
     <p>{{bee.getPhone()}}</p>
@@ -11,11 +14,13 @@
     <p>Posts: {{bee.getPosts().length}}</p>
     <p>Todos: {{bee.getTodos().length}}</p>
     <p>Photos: {{bee.getAlbum().getPhotos().length}}</p>
-    <div class="btn-group" role="group">
-        <button class="btn btn-default" (click)="showInfo(bee)">Posts</button>
-        <button class="btn btn-default" (click)="showAlbum(bee)">Album</button>
-        <button class="btn btn-default" (click)="showTodo(bee)">Todos</button>
-    </div>
+   
+    
 
+    </div>
+    <div class="btn-group" role="group">
+        <button class="btn btn-default" (click)="showPosts()">Posts</button>
+        <button class="btn btn-default" (click)="showAlbum()">Album</button>
+        <button class="btn btn-default" (click)="showTodo()">Todo</button>
     </div>
 </div>

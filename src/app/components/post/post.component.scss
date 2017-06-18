@@ -5,3 +5,16 @@
 p{
     font-size: 14px;
 }
+
+h3{
+     color:#590408;
+}
+
+.btn{
+        background: #465B8F;
+        border-color: #465B8F;
+        &:hover{
+            background: #607CBF;
+            color:#ffffff;
+        }
+    }

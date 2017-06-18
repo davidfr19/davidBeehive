@@ -11,6 +11,7 @@ export class BeesComponent implements OnInit {
   constructor() { }
 
   @Input() bees;
+  @Input() showArray;
 
   @Output() getBee = new EventEmitter;
 
@@ -19,7 +20,7 @@ export class BeesComponent implements OnInit {
 
   currentBee(bee){
     this.getBee.emit(bee);
-    //console.log(bee);
   }
+
 
 }

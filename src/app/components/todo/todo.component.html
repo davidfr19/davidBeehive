@@ -1,5 +1,6 @@
-<p>
-  {{todo.getTitle()}}
-</p>
-<alert>Completed</alert>
-<alert>Pending</alert>
+<div *ngIf="todo.getCompleted()" class=" jumbotron text-center">
+  <p class='tasks'>
+    {{todo.getTitle()}}
+  </p>
+  <button type="button" (click)="todoCompleted(todo)" class="btn btn-primary btn-xs">Mark as completed</button>
+</div>

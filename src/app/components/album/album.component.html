@@ -1,6 +1,6 @@
 <div class="text-center">
   <h1>Bee's Album</h1>
-  <p>{{myCurrentBee.getAlbum().getTitle()}}</p>
+  <h2>{{myCurrentBee.getAlbum().getTitle()}}</h2>
 
   <div *ngFor='let photo of myCurrentBee.getAlbum().getPhotos()' >
     <app-photo [photo]='photo'></app-photo>

@@ -11,11 +11,11 @@
         <form>
           <div class="form-group">
             <label for="exampleInputTittle">Tittle</label>
-            <input type="text" (change)='onTitleChange($event)'  class="form-control" id="exampleInputTittle" placeholder="Title">
+            <input type="text" (change)='onTitleChange($event)' [value]="title"  class="form-control" id="exampleInputTittle" placeholder="Title">
           </div>
           <div class="form-group">
             <label for="exampleInputBody">Body</label>
-            <input type="text" (change)='onBodyChange($event)'  class="form-control" id="exampleInputBody" placeholder="Body">
+            <input type="text" (change)='onBodyChange($event)' [value]="body" class="form-control" id="exampleInputBody" placeholder="Body">
           </div>
         </form>
       </div>

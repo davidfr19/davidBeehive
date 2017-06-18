@@ -10,7 +10,7 @@ export class NewTodoComponent implements OnInit {
 
   constructor() { }
 
-  title: string;
+  title: string ='';
 
   @Input() myCurrentBee;
 
@@ -23,7 +23,7 @@ export class NewTodoComponent implements OnInit {
 
   onDone(){
 
-    var newTodo = new Todo(12,this.myCurrentBee.getId(),this.title,"false");
+    var newTodo = new Todo(12,this.myCurrentBee.getId(),this.title,"true");
     this.myCurrentBee.addTodo(newTodo);
     this.title = '';
   }

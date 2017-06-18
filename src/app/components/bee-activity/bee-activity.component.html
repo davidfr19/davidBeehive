@@ -1,13 +1,13 @@
 <div>
      <div class="col-sm-3 col-md-3">
-            <app-posts (getCurrentPost)='myPost($event)' [myCurrentBee]='myCurrentBee' [iAmBee]='iAmBee'></app-posts>
+            <app-posts (getCurrentPost)='myPost($event)' [myCurrentBee]='myCurrentBee' [iAmBee]='iAmBee'  *ngIf="showArray[0]"></app-posts>
         </div>
 
-        <div class="col-sm-3 col-md-3">
+        <div class="col-sm-3 col-md-3" *ngIf="showArray[1]">
             <app-album [myCurrentBee]='myCurrentBee'></app-album>
         </div>
         
-        <div class="col-sm-3 col-md-3">
+        <div class="col-sm-3 col-md-3" *ngIf="showArray[2]">
             <app-todos [myCurrentBee]='myCurrentBee'></app-todos>
         </div>
 

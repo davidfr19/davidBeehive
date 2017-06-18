@@ -22,10 +22,13 @@ export class AppComponent {
   private bees: Bee[] = [];
   
   // The bee I am modifiying
-  myCurrentBee:Bee;
+  myCurrentBee:Bee = null;
   
   //Me as bee
   iAmBee:Bee;
+
+  // This array controls which component is showing
+  showArray:boolean[] = [true, true, true];
 
   constructor(private http: Http) {
     this.loadFromJson();
@@ -35,6 +38,7 @@ export class AppComponent {
     this.myCurrentBee= e;
     console.log(this.myCurrentBee);
   }
+
 
 
 
@@ -113,7 +117,7 @@ export class AppComponent {
       let address = new Address('Rea Ave', 'Mountain View Valley', 'Cartago', '1000', new Geo
         ('0.000001', '0.000002'));
       let me = new Bee(11, 'David Fallas', 'dFallas', 'dfallasr@ucentotec.ac.cr', '87074308', 'www.davidfallas.com', address
-        , company, 'https://pbs.twimg.com/profile_images/823203313709678593/FoLVmrhK_400x400.jpg');
+        , company, 'https://scontent.fsjo3-1.fna.fbcdn.net/v/t31.0-8/16992519_10211707032966876_7002354643197851767_o.jpg?oh=94ff21ecbe9676ccc555f1e87044cf9d&oe=599FAE8F');
       let album = new Album(1000, 11, 'Davids Photos');
       me.setAlbum(album);
       this.iAmBee = me;

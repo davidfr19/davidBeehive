@@ -1,0 +1,26 @@
+
+
+.tasks{
+   margin: 15px 0 10px;
+   font-size: smaller;
+   text-align: left;
+}
+
+.jumbotron{
+    padding: 10px;
+    margin-top: 10px;
+    background:#F5D756;
+}
+
+
+
+
+.btn{
+        background: #465B8F;
+        border-color: #465B8F;
+        color: #590408;
+        &:hover{
+            background: #607CBF;
+            color:#ffffff;
+        }
+    }

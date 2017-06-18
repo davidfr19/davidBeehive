@@ -11,7 +11,7 @@
         <form>
           <div class="form-group">
             <label for="exampleInputTittle">Tittle</label>
-            <input type="text" class="form-control" (change)='onTitleChange($event)' id="exampleInputTittle" placeholder="Title">
+            <input type="text" class="form-control" [value]="title" (change)='onTitleChange($event)' id="exampleInputTittle" placeholder="Title">
           </div>
         </form>
       </div>

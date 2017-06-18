@@ -27,8 +27,6 @@ export class NewPostComponent implements OnInit {
   }
 
   onDone() {
-    // var newComment = new Comment(12, this.post.getId(), this.title, this.body, this.iAmBee.getEmail());
-    // this.post.addComment(newComment);
     var newPost = new Post(7, this.myCurrentBee.getId(), this.title, this.body);
     this.myCurrentBee.addPost(newPost);
     this.title = '';

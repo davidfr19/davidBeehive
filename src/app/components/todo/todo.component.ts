@@ -14,4 +14,9 @@ export class TodoComponent implements OnInit {
   ngOnInit() {
   }
 
+
+  todoCompleted(todo){
+    todo.setCompleted(false);
+  }
+
 }

@@ -1,4 +1,4 @@
 <h1>Bees</h1>
 <div *ngFor="let bee of bees">
-  <app-bee (sendBee)='currentBee($event)' [bee]='bee'></app-bee>
+  <app-bee (sendBee)='currentBee($event)' [bee]='bee' [showArray]='showArray'></app-bee>
 </div>
